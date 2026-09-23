@@ -13,6 +13,9 @@ python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 python -m pip install -r requirements.txt
 Copy-Item .env.example .env
+# caso esteja no cmd:
+# copy .env.example .env
+
 # Abra .env, informe OPENAI_API_KEY e salve.
 python app.py
 ```
