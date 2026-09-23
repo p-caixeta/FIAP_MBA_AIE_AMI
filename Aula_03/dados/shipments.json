@@ -1,0 +1,24 @@
+{
+  "E100": {
+    "shipment_id": "E100",
+    "status": "atrasado",
+    "last_event": "Ocorrência no centro de distribuição",
+    "eta": "sem previsão confirmada"
+  },
+  "E200": {
+    "error": "service_unavailable",
+    "retryable": false
+  },
+  "E300": {
+    "shipment_id": "E300",
+    "status": "entregue",
+    "last_event": "Entrega registrada",
+    "eta": null
+  },
+  "E400": {
+    "shipment_id": "E400",
+    "status": "atrasado",
+    "last_event": "Exceção de entrega",
+    "eta": "sem previsão confirmada"
+  }
+}

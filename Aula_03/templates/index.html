@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Aula 03 · Agentes e RAG</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  </head>
+  <body>
+    <header>
+      <div>
+        <p class="brand">FIAP · MBA</p>
+        <h1 id="app-title">Aula 03 · Agentes e RAG</h1>
+        <p class="subtitle">Assistente de Atendimento e Operações · v0.1</p>
+      </div>
+      <div class="server-tools">
+        <span id="server-status" role="status">Conectando…</span>
+        <code id="build-id">—</code>
+        <button id="refresh-meta" type="button">Verificar código</button>
+      </div>
+    </header>
+
+    <section class="controls" aria-label="Etapa e exercício">
+      <label>Etapa
+        <select id="stage-select">
+          <option value="baseline">Baseline — Aula 02</option>
+          <option value="fixed_rag">RAG fixo</option>
+          <option value="agentic_rag">RAG como ferramenta</option>
+        </select>
+      </label>
+      <p id="stage-description">Carregando descrição do grafo…</p>
+      <label>Exercício
+        <select id="exercise-select"></select>
+      </label>
+      <details id="exercise-card"><summary>Escolha um exercício</summary><div></div></details>
+      <button id="use-question" type="button">Usar pergunta</button>
+    </section>
+
+    <main>
+      <section id="chat-panel" class="panel chat" aria-label="Conversa">
+        <div id="chat-messages" aria-live="polite"></div>
+        <p id="chat-empty">Envie uma pergunta ou escolha um exercício.</p>
+        <form id="chat-form">
+          <label for="message-input">Pergunta</label>
+          <textarea id="message-input" rows="3" maxlength="4000" placeholder="Ex.: Meu pedido P100 está atrasado. O que aconteceu?"></textarea>
+          <div class="composer-actions">
+            <button id="send-button" type="submit">Enviar</button>
+            <button id="new-chat" type="button">Nova conversa</button>
+            <button id="run-again" type="button">Repetir pergunta</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="panel inspector" aria-label="Inspeção da execução">
+        <label for="run-select">Execução</label>
+        <select id="run-select"><option value="">Nenhuma execução</option></select>
+        <section id="graph-panel">
+          <svg id="graph-svg" role="img" aria-label="Grafo da etapa"></svg>
+          <p id="graph-summary"></p>
+          <p id="graph-legend">Cinza: pendente · Rosa: executando · Verde: concluído · Amarelo: parcial · Vermelho: erro</p>
+        </section>
+        <p id="run-metrics">Modelo: — · Ferramentas: — · Buscas: — · Tempo: —</p>
+        <div id="inspector-tabs" role="tablist" aria-label="Detalhes da execução">
+          <button type="button" role="tab" data-tab="events" aria-selected="true">Eventos</button>
+          <button type="button" role="tab" data-tab="chunks" aria-selected="false">Evidências</button>
+          <button type="button" role="tab" data-tab="details" aria-selected="false">Detalhes</button>
+        </div>
+        <section id="events-panel" class="tab-panel" role="tabpanel"></section>
+        <section id="chunks-panel" class="tab-panel" role="tabpanel" hidden></section>
+        <section id="details-panel" class="tab-panel" role="tabpanel" hidden></section>
+      </section>
+    </main>
+    <p id="notice" aria-live="polite"></p>
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+  </body>
+</html>

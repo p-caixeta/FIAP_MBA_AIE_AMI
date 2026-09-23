@@ -1,0 +1,9 @@
+# Pins herdados dos materiais da disciplina; registrar o ambiente efetivo em VALIDACAO.md após o smoke local.
+langchain==1.4.2
+langchain-core==1.6.3
+langgraph==1.2.11
+langchain-openai==1.6.2
+openai==3.16.2
+scikit-learn==1.7.2
+Flask==3.1.3
+python-dotenv==1.2.3

@@ -1,0 +1,38 @@
+{
+  "P100": {
+    "order_id": "P100",
+    "shipment_id": "E100",
+    "status": "enviado",
+    "modality": "padrao_demo",
+    "items": [
+      "item_demo"
+    ]
+  },
+  "P200": {
+    "order_id": "P200",
+    "shipment_id": "E200",
+    "status": "enviado",
+    "modality": "padrao_demo",
+    "items": [
+      "item_demo"
+    ]
+  },
+  "P300": {
+    "order_id": "P300",
+    "shipment_id": "E300",
+    "status": "enviado",
+    "modality": "padrao_demo",
+    "items": [
+      "item_demo"
+    ]
+  },
+  "P400": {
+    "order_id": "P400",
+    "shipment_id": "E400",
+    "status": "enviado",
+    "modality": "expresso_demo",
+    "items": [
+      "item_demo"
+    ]
+  }
+}
