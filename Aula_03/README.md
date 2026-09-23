@@ -7,7 +7,7 @@ Requer Python 3.11/3.12, CPU, rede e uma chave de modelo compatível. Antes de c
 winget install -e --id Python.Python.3.12
 
 ```powershell
-git clone <seu-repositorio>
+git clone https://github.com/p-caixeta/FIAP_MBA_AIE_AMI.git
 cd Aula_03_new
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
