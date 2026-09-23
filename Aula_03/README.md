@@ -8,7 +8,7 @@ Requer Python 3.11/3.12, CPU, rede e uma chave de modelo compatível. Antes de c
 
 ```powershell
 git clone https://github.com/p-caixeta/FIAP_MBA_AIE_AMI.git
-cd Aula_03_new
+cd Aula_03
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 python -m pip install -r requirements.txt
