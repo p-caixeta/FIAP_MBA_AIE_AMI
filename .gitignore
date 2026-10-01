@@ -16,12 +16,11 @@ tests/
 *.json
 *.xlsx
 plan.md
+BUILD_LOG.md
+guia_professor.md
+*professor*.ipynb
+**/.slide-build/
+Aula_*/slides/
 !.vscode/settings.json
-!/tools/
-!/tools/*.py
 # Dados necessários para executar a Aula 03 em clone limpo.
 !Aula_03/dados/*.json
-!Aula_03/tools/
-!Aula_03/tools/build_notebooks.mjs
-!Aula_04/tools/
-!Aula_04/tools/build_notebooks.py

@@ -3,14 +3,14 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Aula 04 · Memória em agentes</title>
+    <title>Aula 05 · Interoperabilidade com MCP</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
   </head>
   <body>
     <header>
       <div>
         <p class="brand">FIAP · MBA</p>
-        <h1 id="app-title">Aula 04 · Memória em agentes</h1>
+        <h1 id="app-title">Aula 05 · Interoperabilidade com MCP</h1>
         <p class="subtitle">Assistente de Atendimento e Operações · v0.1</p>
       </div>
       <div class="server-tools">
@@ -21,6 +21,13 @@
     </header>
 
     <section class="controls" aria-label="Etapa e exercício">
+      <label>Integração <select id="integration-mode">
+        <option value="local">Local · comparação Aula 04</option>
+        <option value="mcp_tools">MCP · operações</option>
+        <option value="mcp_tools_rag" selected>MCP · operações + RAG</option>
+      </select></label>
+      <label>Transporte <select id="mcp-transport"><option value="stdio">stdio · subprocesso</option>
+        <option value="http">HTTP · servidor local :8005</option></select></label>
       <label>Etapa
         <select id="stage-select">
           <option value="baseline">Baseline — Aula 02</option>
@@ -38,8 +45,8 @@
 
     <section class="controls" aria-label="Memória">
       <label>Memória <select id="memory-mode">
-        <option value="off">Sem memória</option><option value="short" selected>1 · Conversa e contexto</option>
-        <option value="long">2 · Preferência persistente</option><option value="shared">3 · Compartilhar por papel</option>
+        <option value="off">Sem memória</option><option value="short">Conversa e contexto</option>
+        <option value="long">Preferência persistente</option><option value="shared" selected>Compartilhar por papel</option>
       </select></label>
       <label>Seleção <select id="context-strategy"><option value="none">Nenhuma</option>
         <option value="recent">Últimos turnos</option><option value="structured" selected>Estado + últimos turnos</option>
@@ -52,6 +59,23 @@
       <details><summary>Estado armazenado e perfil · U100 / loja_demo</summary><pre id="memory-preview"></pre></details>
     </section>
 
+    <details class="mcp-diagnostics" open>
+      <summary>Laboratório MCP · diagnóstico sem chave de modelo</summary>
+      <p>Servidor customizado para esta aula. O SDK implementa o protocolo; nós definimos ferramentas e dados.
+        O grafo abaixo mostra a execução; a fronteira de processos é Host (grafo + memória + cliente) ↔ servidor MCP → dados sintéticos.</p>
+      <div class="diagnostic-controls">
+        <label>Ferramenta <select id="diagnostic-tool"><option>get_order</option><option>get_delivery_status</option>
+          <option>get_resolution_options</option><option>search_policies</option></select></label>
+        <label>Argumentos JSON <textarea id="diagnostic-arguments" rows="2">{"order_id":"P100"}</textarea></label>
+        <button type="button" data-diagnostic="discover">Descobrir ferramentas</button>
+        <button type="button" data-diagnostic="call">Chamar ferramenta</button>
+        <button type="button" data-diagnostic="resource">Ler manifesto</button>
+        <button type="button" data-diagnostic="compare">Comparar A/B · B adulterado</button>
+        <button type="button" data-diagnostic="timeout">Provocar timeout</button>
+      </div>
+      <p id="diagnostic-status" role="status">A/B e timeout usam stdio. Para HTTP, inicie o servidor indicado no README.</p>
+      <pre id="diagnostic-output" tabindex="0"></pre>
+    </details>
     <main>
       <section id="chat-panel" class="panel chat" aria-label="Conversa">
         <div id="chat-messages" aria-live="polite"></div>
@@ -70,7 +94,7 @@
       <section class="panel inspector" aria-label="Inspeção da execução">
         <label for="run-select">Execução</label>
         <select id="run-select"><option value="">Nenhuma execução</option></select>
-        <section id="graph-panel" tabindex="0" aria-label="Arquitetura da etapa, painel rolável">
+        <section id="graph-panel" tabindex="0" aria-label="Arquitetura da execução, área rolável">
           <svg id="graph-svg" role="img" aria-label="Grafo da etapa"></svg>
           <p id="graph-summary"></p>
           <p id="graph-legend">Cinza: pendente · Rosa: executando · Verde: concluído · Amarelo: parcial · Vermelho: erro</p>

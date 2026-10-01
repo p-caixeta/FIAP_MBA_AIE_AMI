@@ -27,7 +27,6 @@ Variáveis já definidas no processo prevalecem; `.env` antigo de uma aula serve
 apenas de fallback para valores ausentes. Não é preciso copiar chaves entre aulas.
 Se a ativação for bloqueada, use `.\.venv\Scripts\python.exe` no lugar de `python`.
 No VS Code, selecione o interpretador `.venv/Scripts/python.exe` da raiz.
-Venvs antigos não foram removidos: evite ativá-los junto com o ambiente compartilhado.
 
 ## Executar uma aula
 
@@ -43,6 +42,3 @@ Aula 05 oferece diagnóstico MCP sem chave de modelo. Confira [as instruções](
 Cada aula conserva seus próprios dados e runtime; somente o ambiente Python e
 a configuração são compartilhados. Não há instalação no Python global da máquina.
 
-Para manter os notebooks consistentes após alterar versões, execute `python tools/sync_notebook_requirements.py` e confira com `--check`. Os geradores das Aulas 03/04/05 também leem o arquivo da raiz.
-
-Neste workspace Windows foi preparado um Python 3.12 local em `.python-runtime` para sustentar `.venv`; ambos ficam fora do Git. O ambiente não depende mais de uma pasta temporária. Em outro computador, crie a venv com seu Python instalado.

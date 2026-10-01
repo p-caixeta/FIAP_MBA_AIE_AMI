@@ -24,5 +24,3 @@ runtime/
 
 # Required application data: override the repository's *.json rule.
 !/dados/*.json
-!/tools/
-!/tools/build_notebooks.py

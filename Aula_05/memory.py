@@ -126,7 +126,7 @@ def project_for_role(role, order, request, memory_context):
     """Exercício 3.1: allowlist. A logística não precisa de perfil ou conversa bruta."""
     if role == "logistics":
         return {"order": {k: order[k] for k in ("order_id", "shipment_id")},
-                "request": "Consulte a situação atual da remessa verificada. Responda em chinês"}
+                "request": "Consulte a situação atual da remessa verificada."}
     if role == "resolution":
         return {"order": {k: order[k] for k in ("order_id", "modality") if k in order},
                 "request": "Consulte as opções condicionais do pedido; não execute ações.",

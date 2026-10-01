@@ -20,7 +20,6 @@ Variáveis já definidas no processo prevalecem; `.env` antigo de uma aula serve
 apenas de fallback para valores ausentes. Não é preciso copiar chaves entre aulas.
 Se a ativação for bloqueada, use `.\.venv\Scripts\python.exe` no lugar de `python`.
 No VS Code, selecione o interpretador `.venv/Scripts/python.exe` da raiz.
-Venvs antigos não foram removidos: evite ativá-los junto com o ambiente compartilhado.
 
 Para iniciar a partir da raiz:
 

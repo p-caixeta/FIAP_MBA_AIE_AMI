@@ -1,0 +1,6 @@
+runtime/
+.slide-build/
+*.sqlite3*
+!/dados/*.json
+!/exercises.json
+/notebooks/cell_map.json
