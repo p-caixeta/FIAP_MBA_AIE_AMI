@@ -1,0 +1,55 @@
+{
+  "author": "Material original da Aula 06",
+  "license": "CC0-1.0",
+  "kind": "Ilustrações e animações sintéticas, não fotografias de incidentes reais.",
+  "files": [
+    {
+      "file": "e01.jpg",
+      "sha256": "d5f3ab90505e7b7ebfb0bb0055687485e468285d6bcaf703e6bf526612453cf9",
+      "bytes": 25860,
+      "width": 800,
+      "height": 500
+    },
+    {
+      "file": "e02.jpg",
+      "sha256": "bf47fc0d27be6c5a8276cd00b8a9b60cc51f78fcd0294d408d2c21a64c1d0758",
+      "bytes": 25925,
+      "width": 800,
+      "height": 500
+    },
+    {
+      "file": "e03.jpg",
+      "sha256": "e5728e6ccebd6979fe80cd8f35bcbf7a9fd38e655c9f9998d6fc46df4ad76963",
+      "bytes": 16416,
+      "width": 800,
+      "height": 500
+    },
+    {
+      "file": "e04.jpg",
+      "sha256": "bd3a571c23f41d50cab01415c066509753b81c19b5b9815f831d81eb3d8412da",
+      "bytes": 36545,
+      "width": 800,
+      "height": 500
+    },
+    {
+      "file": "v01.mp4",
+      "sha256": "0be44cf942c107ba50b48f5cb4a097b08b4c074413ecb57a34a1ce30cdeddd0d",
+      "bytes": 20070,
+      "width": 800,
+      "height": 500,
+      "duration": 6,
+      "fps": 10,
+      "codec": "H.264/yuv420p"
+    },
+    {
+      "file": "v02.mp4",
+      "sha256": "71af66a8971606040c0cd444de07d867dd6586dc6c89caea5b99e5921b6dfa1e",
+      "bytes": 17678,
+      "width": 800,
+      "height": 500,
+      "duration": 6,
+      "fps": 10,
+      "codec": "H.264/yuv420p"
+    }
+  ]
+}

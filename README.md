@@ -37,8 +37,11 @@ Na raiz, com o ambiente ativado:
 | 03 · RAG | `python Aula_03/app.py` | http://127.0.0.1:5000 |
 | 04 · Memória | `python Aula_04/app.py` | http://127.0.0.1:5001 |
 | 05 · MCP | `python Aula_05/app.py` | http://127.0.0.1:5002 |
+| 06 · Multimodal + HITL | `python Aula_06/app.py` | http://127.0.0.1:5003 |
 
 Aula 05 oferece diagnóstico MCP sem chave de modelo. Confira [as instruções](Aula_05/README.md).
+Aula 06 inclui mídia sintética, revisão humana e três notebooks. O modo de análise fornecida
+funciona sem API; veja [o roteiro e os comandos](Aula_06/README.md).
 Cada aula conserva seus próprios dados e runtime; somente o ambiente Python e
 a configuração são compartilhados. Não há instalação no Python global da máquina.
 

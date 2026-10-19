@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="pt-BR">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aula 06 · Evidência e decisão humana</title>
+<link rel="stylesheet" href="/static/style.css"></head>
+<body>
+<header><div><p class="brand">FIAP · MBA · AULA 06</p><h1>Evidência multimodal, decisão humana</h1>
+<p>Observar → propor → revisar → executar</p></div><span id="model" class="badge"></span></header>
+<div class="toolbar"><label>Exercício <select id="exercise"></select></label><p id="exercise-detail"></p>
+<label>Recuperar caso <select id="cases"><option value="">Escolha…</option></select></label>
+<button id="load">Carregar</button><button id="new">Novo caso</button></div>
+<p id="notice" role="status" aria-live="polite">Análise fornecida funciona sem chave. LMM real envia as mídias selecionadas ao provedor.</p>
+<main>
+<section class="workspace panel">
+<form id="input-form">
+<div class="row"><label>Modo <select id="mode"><option value="provided">Análise fornecida · sem LMM</option>
+<option value="live">LMM real · enviar texto e imagens</option></select></label>
+<label id="fixture-label">Análise fornecida <select id="fixture"><option value="clear">Embalagem / produto não observado</option>
+<option value="unclear">Evidência insuficiente</option><option value="conflict">Conflito entre fontes</option></select></label>
+<label>Quadros <select id="frames"><option>2</option><option selected>8</option></select></label></div>
+<label>Relato e pergunta <textarea id="message" required maxlength="4000"></textarea></label>
+<fieldset><legend>Kit sintético · imagens e MP4s</legend><div id="kit" class="kit"></div>
+<p>Ilustrações didáticas, sem dados pessoais. Vídeos analisados por quadros; áudio não é enviado.</p></fieldset>
+<label>Ou anexar mídia própria (até 10 MB cada) <input id="files" type="file" accept=".jpg,.jpeg,.png,.webp,.mp4" multiple></label>
+<label id="continue-label" hidden><input id="continue" type="checkbox"> Nova evidência no caso atual: substituir proposta e exigir nova revisão</label>
+<button class="primary" type="submit">Analisar e preparar proposta</button>
+</form>
+<div id="case-view" hidden>
+<h2 id="case-title"></h2><div id="originals" class="previews"></div>
+<details open><summary>Quadros e evidências enviados</summary><div id="evidence" class="previews frames"></div></details>
+<h2>O que as evidências sustentam?</h2><div id="analysis"></div>
+<section id="review" class="review" aria-label="Revisão humana">
+<h2>Revisar antes de executar</h2><div id="proposal"></div>
+<div id="decision-controls" hidden>
+<label>Resumo da ação <textarea id="revision" maxlength="1000"></textarea></label>
+<p>Para alterar o resumo, salve uma revisão e confira a nova versão antes de aprovar.</p>
+<div class="row"><button id="revise">Salvar revisão</button><button id="approve" class="primary">Aprovar esta versão</button>
+<button id="reject">Rejeitar</button><button id="request-evidence">Pedir evidência</button></div></div>
+<p id="outcome" role="status"></p></section>
+</div></section>
+<aside class="panel inspector">
+<h2>Inspeção dos passos</h2>
+<section id="graph-panel" tabindex="0" aria-label="Arquitetura com rolagem independente">
+<div class="graph"><span>Texto + imagem + quadros</span><b>↓</b><span>Analista visual</span><b>↓</b><span>Proposta + regra do host</span>
+<b>↓</b><span>Interrupt · revisão humana</span><b>↓</b><span>Versão aprovada → ticket SQLite</span></div></section>
+<p id="metrics">Nenhuma execução ainda.</p><div id="steps" tabindex="0" aria-label="Detalhes dos passos"></div>
+<details><summary>Política de demonstração</summary><div id="policy"></div></details>
+</aside></main>
+<script src="/static/app.js"></script></body></html>

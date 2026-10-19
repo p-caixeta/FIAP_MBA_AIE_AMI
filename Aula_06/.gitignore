@@ -1,0 +1,12 @@
+runtime/
+.slide-build/
+__pycache__/
+*.sqlite3*
+!/dados/*.json
+/exercises.json
+/notebooks/cell_map.json
+/tools/
+/tests/
+/VALIDACAO.md
+/plan.md
+/notebooks/603*.ipynb

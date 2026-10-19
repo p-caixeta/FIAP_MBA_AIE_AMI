@@ -1,0 +1,10 @@
+{
+  "id": "avarias-demo",
+  "version": "1.0",
+  "rules": [
+    "Abrir análise de avaria para P600 entregue quando houver evidência legível e sem conflito essencial.",
+    "Dano na embalagem não comprova dano ao produto.",
+    "Toda criação de chamado exige aprovação humana da versão atual.",
+    "Sem compensação, coleta, mensagens externas ou transações financeiras nesta demonstração."
+  ]
+}

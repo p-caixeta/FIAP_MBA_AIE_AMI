@@ -1,0 +1,9 @@
+{
+  "order_id": "P600",
+  "shipment_id": "E600",
+  "status": "delivered",
+  "delivered_on": "2026-09-28",
+  "customer": "Cliente sintético",
+  "product": "Equipamento de demonstração",
+  "message": "A caixa chegou amassada. Enviei uma foto e um vídeo curto. Podemos abrir uma análise de avaria?"
+}

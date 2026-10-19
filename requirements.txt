@@ -12,3 +12,6 @@ jsonschema==4.26.0
 Pillow==12.3.0
 opencv-python-headless==5.0.0.93
 langgraph-checkpoint-sqlite==3.1.1
+ipykernel==7.4.0
+# Apenas para regenerar os MP4s sintéticos; inclui FFmpeg sem instalação manual.
+imageio-ffmpeg==0.6.0
