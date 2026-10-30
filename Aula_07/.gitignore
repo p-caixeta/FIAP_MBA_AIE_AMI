@@ -5,3 +5,7 @@
 /dist/
 __pycache__/
 *.sqlite*
+
+#Per class add
+/Aula_*/
+#!/Aula_03/
