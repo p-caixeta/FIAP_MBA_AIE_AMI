@@ -24,3 +24,7 @@ Aula_*/slides/
 !.vscode/settings.json
 # Dados necessários para executar a Aula 03 em clone limpo.
 !Aula_03/dados/*.json
+
+#Per class add
+/Aula_*/
+#!/Aula_03/
